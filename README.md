@@ -21,3 +21,5 @@ React Router (optional if your app is Single Page)
 
 ## Responsiveness
 Website should work on both web and smartphone sizes
+
+## Developed by: Geri
