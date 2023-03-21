@@ -1,16 +1,16 @@
 import React from "react";
 import Form from "./Form";
 import WeatherCard from "./WeatherCard";
+import Loader from "./Loader";
 import useWeather from "../hooks/useWeather";
 
 const WeatherApp = () => {
-
-  const { resultData } = useWeather();
+  const { resultData, loading } = useWeather();
   return (
     <>
       <main className="grid grid-cols-2 items-center justify-center">
         <Form />
-        { resultData?.name &&  <WeatherCard />}
+        {loading ? <Loader /> : resultData?.name && <WeatherCard />}
       </main>
     </>
   );

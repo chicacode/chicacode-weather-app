@@ -13,6 +13,7 @@ const WeatherProvider = ({ children }) => {
   });
 
   const [resultData, setResultData] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const setData = (e) => {
     setSearchData({
@@ -22,7 +23,7 @@ const WeatherProvider = ({ children }) => {
   };
 
   const getData = async formData =>{
-
+    setLoading(true)
     try {
       const { city, country } = formData;
       const apiId = import.meta.env.VITE_API_KEY;
@@ -34,15 +35,18 @@ const WeatherProvider = ({ children }) => {
 
     } catch (error) {
       console.log(error)
+    }finally{
+      setLoading(false)
     }
-
   }
+
   return (
     <WeatherContext.Provider  value={{
       searchData,
       setData,
       getData,
-      resultData
+      resultData,
+      loading
   }}>
       {children}
     </WeatherContext.Provider>
