@@ -1,4 +1,9 @@
+import useWeather from '../hooks/useWeather'
+
+
 const Form = () => {
+
+    const { searchData, setSearchData } = useWeather;
   return (
     <div className="text-primary container">
       <h1 className="py-4 text-5xl text-white text-center">Search Weather</h1>
@@ -12,6 +17,7 @@ const Form = () => {
               className="px-4 py-3"
               id="city"
               name="city"
+              onChange={setSearchData}
             />
           </div>
 
