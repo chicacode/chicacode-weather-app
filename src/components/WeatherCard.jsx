@@ -12,11 +12,18 @@ const WeatherCard = () => {
       <div className="max-w-sm p-6 bg-white border border-gray rounded-lg">
         <div className="flex justify-around items-center">
         <img src={`http://openweathermap.org/img/w/${weather[0]?.icon}.png`} alt="Sunset in the mountains" width={100} height={100}/>
-          <a href="#">
+          <div className="">
             <h5 className="mb-2 text-2xl font-medium tracking-tight text-primary">
               {name}, {sys?.country}
             </h5>
-          </a>
+          </div>
+  
+        </div>
+        <div className="flex justify-around items-center">
+        <span className="inline-block bg-gray rounded-full px-3 py-1 text-lg mr-2 mb-2">
+            Temp: { parseInt(main?.temp - kelvin)} <span>&#x2103;</span>
+          </span>
+
         </div>
 
         <CardDetail data={weather}/> 
@@ -27,17 +34,18 @@ const WeatherCard = () => {
           <span className="inline-block bg-gray rounded-full px-3 py-1 text-sm mr-2 mb-2">
             Lon: {coord?.lon}
           </span>
+
           <span className="inline-block bg-gray rounded-full px-3 py-1 text-sm mr-2 mb-2">
-            Temp: {main?.temp}
+             Min: { parseInt(main?.temp_min - kelvin)} <span>&#x2103;</span>
+          </span>
+
+          <span className="inline-block bg-gray rounded-full px-3 py-1 text-sm mr-2 mb-2">
+            Max: { parseInt(main?.temp_max - kelvin)} <span>&#x2103;</span>
           </span>
         </div>
 
-        <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
-          Go to this step by step guideline process on how to certify for your
-          weekly benefits:
-        </p>
         <a
-          href="#"
+          href="https://github.com/chicacode/chicacode-weather-app"
           className="inline-flex items-center text-blue-600 hover:underline"
         >
           See our guideline
