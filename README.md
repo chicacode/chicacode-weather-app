@@ -14,6 +14,10 @@ Material UI/ Reactstrap / Styled-components / SASS / CSS Module / Regular CSS / 
 2. React Features:
 - Functional Components
 
+## Using Vite building
+Vite uses the native ES modules feature in the browser to handle imports, while webpack and Parcel use a more traditional approach of bundling all the files together. Thisallows for faster development builds and hot module replacement with Vite
+source - medium by Erbil Nas
+
 ● Hooks
 Class Components
 ● Lifecycle methods

@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 body {
-  font-family: "Lato", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Tilt Warp", cursive;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Tilt Warp', cursive;
   /* background-color: #f1f5f9; */
   background-color: #162530;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 header {
   background-color: #0ea5e9;
@@ -27,6 +28,7 @@ main {
   margin: 4rem auto;
   max-width: 1200px;
 }
+
 
 form {
   width: 100%;

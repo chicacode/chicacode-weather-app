@@ -5,4 +5,4 @@ const useWeather = () => {
   return useContext(WeatherContext);
 }
 
-export default useWeather
+export default useWeather;
