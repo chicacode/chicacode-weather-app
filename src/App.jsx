@@ -1,13 +1,12 @@
-import WeatherApp from "./components/WeatherApp"
+import WeatherApp from "./components/WeatherApp";
+import { WeatherProvider } from './context/WeatherProvider';
 
 function App() {
-
-
   return (
-    <div className="App">
-      <WeatherApp />
-    </div>
-  )
+    <WeatherProvider>
+        <WeatherApp />
+    </WeatherProvider>
+  );
 }
 
-export default App
+export default App;

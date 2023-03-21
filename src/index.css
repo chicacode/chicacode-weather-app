@@ -22,15 +22,7 @@ header h1 {
   font-size: 3rem;
   margin: 0;
 }
-/* .main-grid-columns__weather-app {
-  display: grid;
-  gap: 4rem;
-}
-@media (min-width: 768px) {
-  .main-grid-columns__weather-app {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
+
 main {
   margin: 4rem auto;
   max-width: 1200px;
