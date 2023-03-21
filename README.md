@@ -23,6 +23,18 @@ Class Components
 ● Lifecycle methods
 React Router (optional if your app is Single Page)
 
+## App evolution
+
+![alt text](./assets/img/app-1.png "image")
+
+![alt text](./assets/img/provider-app-2.png "image")
+
+![alt text](./assets/img/app-3.png "image")
+![alt text](./assets/img/app-4.png "image")
+
+## References
+https://snippetsdb.com/convert-kelvin-to-celsius-in-javascript/
+https://home.openweathermap.org/
 ## Responsiveness
 Website should work on both web and smartphone sizes
 

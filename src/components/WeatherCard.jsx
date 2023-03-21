@@ -6,15 +6,15 @@ const WeatherCard = () => {
   const { resultData } = useWeather();
   console.log(resultData);
   const { name, weather, main, coord, sys, wind } = resultData;
-
+ const kelvin = 273.15;
   return (
     <div>
       <div className="max-w-sm p-6 bg-white border border-gray rounded-lg">
         <div className="flex justify-around items-center">
-        <img src={`http://openweathermap.org/img/w/${weather[0].icon}.png`} alt="Sunset in the mountains" width={100} height={100}/>
+        <img src={`http://openweathermap.org/img/w/${weather[0]?.icon}.png`} alt="Sunset in the mountains" width={100} height={100}/>
           <a href="#">
             <h5 className="mb-2 text-2xl font-medium tracking-tight text-primary">
-              {name}, {sys.country}
+              {name}, {sys?.country}
             </h5>
           </a>
         </div>
@@ -22,13 +22,13 @@ const WeatherCard = () => {
         <CardDetail data={weather}/> 
         <div className="px-6 pt-4 pb-2">
           <span className="inline-block bg-gray rounded-full px-3 py-1 text-sm  mr-2 mb-2">
-            #photography
+            Lat: {coord?.lat}
           </span>
           <span className="inline-block bg-gray rounded-full px-3 py-1 text-sm mr-2 mb-2">
-            #travel
+            Lon: {coord?.lon}
           </span>
           <span className="inline-block bg-gray rounded-full px-3 py-1 text-sm mr-2 mb-2">
-            #winter
+            Temp: {main?.temp}
           </span>
         </div>
 

@@ -33,6 +33,10 @@ main {
  font-size: 24px;
  color: yellow;
 }
+
+svg{
+  color: #0284c7;
+}
 form {
   width: 100%;
 }
