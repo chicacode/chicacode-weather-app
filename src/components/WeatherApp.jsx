@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Form from "./Form";
 
 const WeatherApp = () => {
   return (
-    <div>WeatherApp</div>
-  )
-}
+    <>
+      <main className="main-grid-columns__weather-app">
+        <Form />
+      </main>
+    </>
+  );
+};
 
 export default WeatherApp;
