@@ -14,6 +14,7 @@ const WeatherProvider = ({ children }) => {
 
   const [resultData, setResultData] = useState({});
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const setData = (e) => {
     setSearchData({
@@ -24,6 +25,8 @@ const WeatherProvider = ({ children }) => {
 
   const getData = async formData =>{
     setLoading(true)
+    setError(false)
+    
     try {
       const { city, country } = formData;
       const apiId = import.meta.env.VITE_API_KEY;
@@ -34,7 +37,7 @@ const WeatherProvider = ({ children }) => {
       setResultData(data)
 
     } catch (error) {
-      console.log(error)
+      setError('No results from api, insert valid data')
     }finally{
       setLoading(false)
     }
@@ -46,7 +49,8 @@ const WeatherProvider = ({ children }) => {
       setData,
       getData,
       resultData,
-      loading
+      loading,
+      error
   }}>
       {children}
     </WeatherContext.Provider>

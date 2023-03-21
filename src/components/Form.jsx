@@ -2,7 +2,7 @@ import useWeather from "../hooks/useWeather";
 import { useState } from "react";
 
 const Form = () => {
-  const [alert, setAlert] = useState("");
+  const [alert, setAlert] = useState('');
   // custom hook
   // getData handle Function
   const { searchData, setData, getData } = useWeather();
@@ -17,6 +17,7 @@ const Form = () => {
     if (Object.values(searchData).includes("")) {
       setAlert("All fields are required");
     }
+    setAlert('')
     getData(searchData);
   };
 
