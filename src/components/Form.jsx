@@ -1,7 +1,6 @@
 import useWeather from "../hooks/useWeather";
 import { useState } from "react";
 
-
 const Form = () => {
   const [alert, setAlert] = useState("");
   // custom hook

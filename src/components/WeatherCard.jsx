@@ -1,24 +1,37 @@
-const WeatherCard = ({}) => {
+import useWeather from "../hooks/useWeather";
+import CardDetail from "./CardDetail";
+
+
+const WeatherCard = () => {
+  const { resultData } = useWeather();
+  console.log(resultData);
+  const { name, weather, main, coord, sys, wind } = resultData;
+
   return (
     <div>
-      <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <svg
-          className="w-10 h-10 mb-2 text-gray-500 dark:text-gray-400"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z"
-          ></path>
-          <path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path>
-        </svg>
-        <a href="#">
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-            Need a help in Claim?
-          </h5>
-        </a>
+      <div className="max-w-sm p-6 bg-white border border-gray rounded-lg">
+        <div className="flex justify-around items-center">
+        <img src={`http://openweathermap.org/img/w/${weather[0].icon}.png`} alt="Sunset in the mountains" width={100} height={100}/>
+          <a href="#">
+            <h5 className="mb-2 text-2xl font-medium tracking-tight text-primary">
+              {name}, {sys.country}
+            </h5>
+          </a>
+        </div>
+
+        <CardDetail data={weather}/> 
+        <div className="px-6 pt-4 pb-2">
+          <span className="inline-block bg-gray rounded-full px-3 py-1 text-sm  mr-2 mb-2">
+            #photography
+          </span>
+          <span className="inline-block bg-gray rounded-full px-3 py-1 text-sm mr-2 mb-2">
+            #travel
+          </span>
+          <span className="inline-block bg-gray rounded-full px-3 py-1 text-sm mr-2 mb-2">
+            #winter
+          </span>
+        </div>
+
         <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
           Go to this step by step guideline process on how to certify for your
           weekly benefits:
