@@ -26,12 +26,12 @@ const Navbar = () => {
               Weather
             </button>
 
-            <button
+            {/* <button
               className={'mr-6 text-light hover:cursor-pointer hover:text-indigo'}
               onClick={() => navigate('/favorites')}
             >
               Favorites
-            </button>
+            </button> */}
             <button
               className={'mr-6 text-light hover:cursor-pointer hover:text-indigo'}
               onClick={() => navigate('/settings')}
