@@ -2,6 +2,7 @@ import WeatherApp from "./components/WeatherApp";
 
 import { Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { WeatherProvider } from "./context/WeatherProvider";
 import HomePage from "./pages/HomePage";
 import AboutPage from './pages/AboutPage';
@@ -21,6 +22,7 @@ function App() {
           <Route path='/favorites' element={<FavoritesPage />} />
           <Route path='/settings' element={<SettingsPage />} />
         </Routes>
+        <Footer />
         
       </WeatherProvider>
   );

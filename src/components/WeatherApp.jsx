@@ -10,6 +10,10 @@ const WeatherApp = () => {
   return (
     <>
       <main className="grid grid-cols-2 items-center justify-center">
+        <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
+            style={{
+              minHeight: "50vh"
+            }}> 
         <Form />
         {loading ? <Loader /> : resultData?.name && <WeatherCard />}
         {error && (
@@ -20,6 +24,8 @@ const WeatherApp = () => {
             {error}
           </div>
         )}
+        </div>
+
       </main>
     </>
   );

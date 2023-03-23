@@ -8,7 +8,7 @@ const Navbar = () => {
         <ul className="flex justify-between bg-primary-light px-4 py-4">
           
             <button
-              className={'mr-6 text-light hover:cursor-pointer hover:text-indigo'}
+              className={'mr-6 text-light hover:cursor-pointer hover:text-indigo ml-6'}
               onClick={() => navigate('/')}
             >
               Home
