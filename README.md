@@ -25,6 +25,8 @@ React Router (optional if your app is Single Page)
 
 ## App evolution
 
+![alt text](./public/assets/img/homepage.png "image")
+
 ![alt text](./public/assets/img/app-1.png "image")
 
 ![alt text](./public/assets/img/provider-app-2.png "image")
