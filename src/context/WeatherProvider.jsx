@@ -29,7 +29,8 @@ const WeatherProvider = ({ children }) => {
     
     try {
       const { city, country } = formData;
-      const apiId = import.meta.env.VITE_API_KEY;
+
+      const apiId = "07913097fbe92c98944f64bb91481719";
 
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}, ${country}&appid=${apiId}`;
       
