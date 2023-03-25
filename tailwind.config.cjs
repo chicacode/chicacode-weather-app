@@ -12,7 +12,7 @@ module.exports = {
         hover: 'rgba(78, 168, 222, 0.12)'
       },
       secondary:{
-        DEFAULT: '#162530',
+        DEFAULT: '#162E4C',
         light:'rgba(19, 41, 75, 0.26)',
         hover: 'rgba(76, 159, 200, 0.26)'
       },
@@ -35,8 +35,11 @@ module.exports = {
       light:'#FFF',
       purple:'#A76389',
       error:'rgb(245, 101, 101)',
-      info:'#d1ecf1',
-      gray:'#f5f5f5',
+      info:'#D1ECF1',
+      gray:'#FCFCFC',
+      grayDark: '#EEF2F3',
+      grayDarkTitles: '#ACB1B4',
+      secondaryInfo: '#2E435F',
       yellow:'#FBF191',
     },
     extend: {},

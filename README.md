@@ -25,15 +25,11 @@ React Router (optional if your app is Single Page)
 
 ## App evolution
 
-![alt text](./public/assets/img/homepage.png "image")
+
+![alt text](./public/assets/img/dashboard.png "image")
 
 ![alt text](./public/assets/img/app-1.png "image")
 
-![alt text](./public/assets/img/provider-app-2.png "image")
-
-![alt text](./public/assets/img/app-3.png "image")
-![alt text](./public/assets/img/app-4.png "image")
-![alt text](./public/assets/img/app-5.png "image")
 ![alt text](./public/assets/img/app-6.png "image")
 
 ## References
