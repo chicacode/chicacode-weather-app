@@ -5,10 +5,8 @@
 body {
   font-family: 'Lato', sans-serif;
   font-family: 'Poppins', sans-serif;
-  font-family: 'Tilt Warp', cursive;
   background-color: #ffffff;
   font-size: 1rem;
-  font-weight: 400;
 }
 header {
   background-color: #0ea5e9;
@@ -18,7 +16,6 @@ header {
 header h1 {
   text-align: center;
   color: white;
-  font-family: "Inter", sans-serif;
   font-size: 3rem;
   margin: 0;
 }
