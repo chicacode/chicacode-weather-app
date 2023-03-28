@@ -16,7 +16,7 @@ function App() {
       <div className="h-screen mx-auto flex flex-col pl-16 lg:pl-48">
       <Header />
         <main className="flex-grow">
-          <div className="mx-auto max-w-2xl lg:max-w-3xl xl:max-w-5xl px-0 lg:px-6 xl:px-8">
+          <div className="mx-auto container max-w-2xl lg:max-w-3xl xl:max-w-5xl">
             <Routes>
               <Route exact path="/" element={<Dashboard />} />
               <Route path="/recent-searches" element={<RecentSearchesPage />} />

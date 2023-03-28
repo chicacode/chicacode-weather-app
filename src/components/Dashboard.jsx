@@ -5,7 +5,6 @@ const Dashboard = () => {
   return (
     <div>
       <DashboardHeader />
-      <div>Dashboard</div>
       <WeatherApp />
     </div>
   );

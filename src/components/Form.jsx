@@ -23,7 +23,6 @@ const Form = () => {
 
   return (
     <div className="text-primary container">
-      <h1 className="py-4 text-5xl text-white text-center">Search Weather</h1>
       {alert && (
         <div className="flex justify-center text-center items-center container mx-auto w-64 bg-error text-light font-light">
           <span className="px-0.5">
@@ -34,11 +33,13 @@ const Form = () => {
       )}
       <div className="form">
         <form onSubmit={handleSubmit}>
-          <div className="form-field-city">
-            <label htmlFor="city">City</label>
+          <div className="flex justify-between">
+
+    
+          <div className="form-field-city  w-72">
             <input
               type="text"
-              placeholder="Enter city name"
+              placeholder="Search location here"
               className="px-4 py-3"
               id="city"
               name="city"
@@ -47,7 +48,7 @@ const Form = () => {
             />
           </div>
 
-          <div className="form-field-country">
+          {/* <div className="form-field-country">
             <label htmlFor="country">Country</label>
             <select
               name="country"
@@ -80,13 +81,14 @@ const Form = () => {
               <option value="UY">Uruguay</option>
               <option value="VE">Venezuela</option>
             </select>
-          </div>
-          <div className="flex justify-center">
+          </div> */}
+          <div className="w-16">
             <input
               type="submit"
-              value={"Get wheather"}
-              className="px-4 py-3 bg-primary text-light rounded-md border-0"
+              value={"search"}
+              className="px-2 py-2 bg-primary text-light rounded-xl border-0 items-center"
             />
+          </div>
           </div>
         </form>
       </div>

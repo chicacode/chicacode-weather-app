@@ -1,16 +1,32 @@
 import React from "react";
-import Form from "./Form";
 import WeatherCard from "./WeatherCard";
 import Loader from "./Loader";
 import useWeather from "../hooks/useWeather";
 
 const WeatherApp = () => {
   const { resultData, loading, error } = useWeather();
+  const { name, weather, main, coord, sys, wind } = resultData;
 
   return (
     <>
-      <main className="grid grid-cols-2 items-center justify-center">
-        <Form />
+
+      <main className="flex flex-col items-center justify-center">
+
+      {resultData?.name  && (
+          <div className="flex items-center mx-auto text-center">
+            <img
+              src={`http://openweathermap.org/img/w/${weather[0]?.icon}.png`}
+              alt="Sunset in the mountains"
+              width={50}
+              height={50}
+            />
+            <div className="">
+              <h5 className="mb-2 text-2xl font-medium tracking-tight text-primary">
+                {name}, {sys?.country}
+              </h5>
+            </div>
+          </div>
+        )}
         {loading ? <Loader /> : resultData?.name && <WeatherCard />}
         {error && (
           <div className="flex justify-center text-center items-center container mx-auto w-86 bg-error text-light font-light">
@@ -20,7 +36,6 @@ const WeatherApp = () => {
             {error}
           </div>
         )}
-
       </main>
     </>
   );

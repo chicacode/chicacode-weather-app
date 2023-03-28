@@ -1,14 +1,10 @@
+import Form from "./Form";
 
 const Search = () => {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    
-       console.log("submiting data")
-      };
   return (
     <div>
-         <form onSubmit={handleSubmit}>
+         {/* <form onSubmit={handleSubmit}>
           <div className="form-field-city">
             <input
               type="text"
@@ -20,7 +16,9 @@ const Search = () => {
             //   value={city}
             />
           </div>
-          </form>
+          </form> */}
+
+<Form />
 
     </div>
   )

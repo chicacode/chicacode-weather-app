@@ -39,6 +39,8 @@ module.exports = {
       gray:'#FCFCFC',
       grayText:'#BDBDC0',
       grayDark: '#EEF2F3',
+      grayDarkOpacity26: 'rgba(189, 189, 192, 0.26)',
+      grayDarkOpacity: 'rgba(189, 189, 192, 0.12)',
       grayDarkTitles: '#ACB1B4',
       secondaryInfo: '#2E435F',
       yellow:'#FBF191',
