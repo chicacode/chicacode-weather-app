@@ -62,19 +62,19 @@ const SettingsPage = () => {
                     <div className="flex justify-center py-4 lg:pt-4 pt-8">
                       <div className="mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
-                        <i class="fa-regular fa-user text-black"></i>
+                        <i className="fa-regular fa-user text-black"></i>
                         </span>
                         <span className="text-sm text-gray-500">Personal</span>
                       </div>
                       <div className="mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
-                        <i class="fa-regular fa-address-card"></i>
+                        <i className="fa-regular fa-address-card"></i>
                         </span>
                         <span className="text-sm text-gray-500">Profile</span>
                       </div>
                       <div className="mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
-                        <i class="fa fa-gear"></i>
+                        <i className="fa fa-gear"></i>
                         </span>
                         <span className="text-sm text-gray-500">Language & Regions</span>
                       </div>

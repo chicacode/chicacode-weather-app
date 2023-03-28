@@ -37,6 +37,7 @@ module.exports = {
       error:'rgb(245, 101, 101)',
       info:'#D1ECF1',
       gray:'#FCFCFC',
+      grayText:'#BDBDC0',
       grayDark: '#EEF2F3',
       grayDarkTitles: '#ACB1B4',
       secondaryInfo: '#2E435F',
