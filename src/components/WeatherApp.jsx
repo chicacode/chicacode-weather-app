@@ -4,9 +4,10 @@ import Loader from "./Loader";
 import useWeather from "../hooks/useWeather";
 
 const WeatherApp = () => {
-  const { resultData, loading, error } = useWeather();
-  const { name, weather, main, coord, sys, wind } = resultData;
-
+  const { resultData, resultForecastData, loading, error } = useWeather();
+  // console.log("data en app", resultForecastData)
+  // const { name, weather, main, coord, sys, wind } = resultData;
+  const { current, forecast, location } = resultForecastData;
   return (
     <>
 
@@ -27,7 +28,7 @@ const WeatherApp = () => {
             </div>
           </div>
         )}
-        {loading ? <Loader /> : resultData?.name && <WeatherCard />}
+        {loading ? <Loader /> : resultForecastData?.current && <WeatherCard />}
         {error && (
           <div className="flex justify-center text-center items-center container mx-auto w-86 bg-error text-light font-light">
             <span className="px-0.5">

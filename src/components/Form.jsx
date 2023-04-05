@@ -5,7 +5,7 @@ const Form = () => {
   const [alert, setAlert] = useState('');
   // custom hook
   // getData handle Function
-  const { searchData, setData, getData } = useWeather();
+  const { searchData, setData, getData, forecastData } = useWeather();
 
   // destructuring objects
   const { city, country } = searchData;
@@ -18,7 +18,8 @@ const Form = () => {
       setAlert("All fields are required");
     }
     setAlert('')
-    getData(searchData);
+    //getData(searchData);
+    forecastData(searchData);
   };
 
   return (
