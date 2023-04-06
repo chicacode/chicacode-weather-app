@@ -1,14 +1,16 @@
-import React from "react";
+
 
 const CardDetail = ({ data }) => {
   return (
     <div>
-      <div className="max-w-sm rounded overflow-hidden">
-        <div className="px-6 py-4">
-          <div className="font-bold text-lg text-primary mb-2">{data[0]?.main}</div>
-          <p className="text-gray text-base">
-          {data[0]?.description}
-          </p>
+      <div
+        class="mb-4 rounded-lg bg-primary-light px-6 py-5 text-base text-primary font-medium"
+        role="alert"
+      >
+        <div className="flex justify-start">
+          <span>{data?.name}</span>
+          <span  className="mx-2">{data?.region},</span>
+          <span className="font-bold">{data?.country}</span>
         </div>
       </div>
     </div>

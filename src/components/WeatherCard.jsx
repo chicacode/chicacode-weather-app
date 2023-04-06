@@ -6,9 +6,12 @@ const WeatherCard = () => {
   // console.log(resultData);
   // const { name, weather, main, coord, sys, wind } = resultData;
   const { current, forecast, location } = resultForecastData;
+
+  // console.log("data card", resultForecastData)
   const kelvin = 273.15;
   return (
     <div>
+       <CardDetail data={location} />
       <div className="grid grid-cols-2 gap-4">
         <div className="max-w-lg w-80 p-4 bg-grayDarkOpacity border border-gray rounded-lg">
           <div className="flex flex-col justify-around items-center">
@@ -60,9 +63,6 @@ const WeatherCard = () => {
             <h6 className="text-grayDarkTitles text-base font-base">
               Rain Chance
             </h6>
-            {/* <span className="inline-block bg-gray rounded-full px-3 py-1 text-lg mr-2 mb-2">
-            Temp: {parseInt(main?.temp - kelvin)} <span>&#x2103;</span>
-          </span> */}
 
             <div className="grid grid-cols-3 gap-1 items-center">
               <div>
@@ -79,7 +79,7 @@ const WeatherCard = () => {
               </div>
               <div className="flex justify-center items-center mx-2">
                 <h4 className="text-secondary text-4xl font-bold">
-                  {forecast?.forecastday[0].hour[0]?.chance_of_rain}{" "}
+                  {forecast?.forecastday[0].day?.daily_chance_of_rain}{" "}
                 </h4>{" "}
                 <span className="text-secondary text-2xl font-bold">-</span>
               </div>
@@ -99,7 +99,7 @@ const WeatherCard = () => {
             </div>
           </div>
         </div>
-        {/* <CardDetail data={weather} /> */}
+       
       </div>
       <div className="grid grid-cols-2 gap-4 mt-2">
         <div className="max-w-lg w-80 p-4 bg-grayDarkOpacity border border-gray rounded-lg">
@@ -107,10 +107,7 @@ const WeatherCard = () => {
             <h6 className="text-grayDarkTitles text-base font-base">
              Pressure
             </h6>
-            {/* <span className="inline-block bg-gray rounded-full px-3 py-1 text-lg mr-2 mb-2">
-              Temp: {parseInt(main?.temp - kelvin)} <span>&#x2103;</span>
-            </span> */}
-
+  
             <div className="grid grid-cols-3 gap-1 items-center">
               <div>
                 <svg

@@ -11,23 +11,8 @@ const WeatherApp = () => {
   return (
     <>
 
-      <main className="flex flex-col items-center justify-center">
+      <main className="flex w-full items-center justify-center">
 
-      {resultData?.name  && (
-          <div className="flex items-center mx-auto text-center">
-            <img
-              src={`http://openweathermap.org/img/w/${weather[0]?.icon}.png`}
-              alt="Sunset in the mountains"
-              width={50}
-              height={50}
-            />
-            <div className="">
-              <h5 className="mb-2 text-2xl font-medium tracking-tight text-primary">
-                {name}, {sys?.country}
-              </h5>
-            </div>
-          </div>
-        )}
         {loading ? <Loader /> : resultForecastData?.current && <WeatherCard />}
         {error && (
           <div className="flex justify-center text-center items-center container mx-auto w-86 bg-error text-light font-light">

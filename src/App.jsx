@@ -13,10 +13,10 @@ function App() {
     <WeatherProvider>
       <Sidebar />
       
-      <div className="h-screen mx-auto flex flex-col pl-16 lg:pl-48">
+      <div className="h-screen mx-auto flex flex-col ml-28 pl-28 lg:pl-48">
       <Header />
         <main className="flex-grow">
-          <div className="mx-auto container max-w-2xl lg:max-w-3xl xl:max-w-5xl">
+          <div className="mx-auto container max-w-2xl lg:max-w-6xl xl:max-w-7xl">
             <Routes>
               <Route exact path="/" element={<Dashboard />} />
               <Route path="/recent-searches" element={<RecentSearchesPage />} />
