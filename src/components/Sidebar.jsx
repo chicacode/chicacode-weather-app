@@ -1,10 +1,9 @@
 import { useNavigate } from "react-router-dom";
-// import Header from "./Header";
 const Sidebar = () => {
   const navigate = useNavigate();
   return (
-    <div >
-      <div className="hide-in-print z-30 fixed h-screen w-16 lg:w-64 bg-white transition-all duration-500 p-3 bg-grayDark shadow  pt-10">
+    <div>
+      <div className="hide-in-print z-30 fixed h-screen w-20 lg:w-64 bg-white transition-all duration-500 p-3 bg-grayDark shadow  pt-10">
         <div className="space-y-3">
           <div className="flex items-center">
             <h2 className="text-xl font-bold text-secondary">

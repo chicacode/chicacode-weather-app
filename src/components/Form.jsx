@@ -34,7 +34,7 @@ const Form = () => {
       )}
       <div className="form">
         <form onSubmit={handleSubmit}>
-          <div className="flex justify-between">
+          <div className="flex justify-start">
 
     
           <div className="form-field-city  w-72">
@@ -83,7 +83,7 @@ const Form = () => {
               <option value="VE">Venezuela</option>
             </select>
           </div> */}
-          <div className="w-16">
+          <div className="w-16 ml-5">
             <input
               type="submit"
               value={"search"}
