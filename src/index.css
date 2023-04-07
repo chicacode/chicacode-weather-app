@@ -29,6 +29,10 @@ svg{
   color: #0284c7;
 }
 
+canvas{
+  width: 1600px;
+  height: 500px;
+}
 
 .form-field-city input,
 .form-field-country select {

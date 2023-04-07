@@ -7,14 +7,15 @@ import { WeatherProvider } from "./context/WeatherProvider";
 import FavoritesPage from "./pages/FavoritesPage";
 import RecentSearchesPage from "./pages/RecentSearchesPage";
 import SettingsPage from "./pages/SettingsPage";
+import ChartSection from "./components/ChartSection";
 
 function App() {
   return (
     <WeatherProvider>
       <Sidebar />
-      
+
       <div className="h-screen mx-auto flex flex-col ml-28 pl-28 lg:pl-48">
-      <Header />
+        <Header />
         <main className="flex-grow">
           <div className="mx-auto container max-w-2xl lg:max-w-6xl xl:max-w-7xl">
             <Routes>
@@ -25,6 +26,7 @@ function App() {
               <Route path="*" element={<NoFound />} />
             </Routes>
           </div>
+          <ChartSection />
         </main>
       </div>
 

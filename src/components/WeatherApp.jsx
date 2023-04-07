@@ -4,10 +4,9 @@ import Loader from "./Loader";
 import useWeather from "../hooks/useWeather";
 
 const WeatherApp = () => {
-  const { resultData, resultForecastData, loading, error } = useWeather();
-  // console.log("data en app", resultForecastData)
+  const { resultForecastData, loading, error } = useWeather();
+  
   // const { name, weather, main, coord, sys, wind } = resultData;
-  const { current, forecast, location } = resultForecastData;
   return (
     <>
 

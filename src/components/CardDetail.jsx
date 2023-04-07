@@ -4,7 +4,7 @@ const CardDetail = ({ data }) => {
   return (
     <div>
       <div
-        class="mb-4 rounded-lg bg-primary-light px-6 py-5 text-base text-primary font-medium"
+        className="mb-4 rounded-lg bg-primary-light px-6 py-5 text-base text-primary font-medium"
         role="alert"
       >
         <div className="flex justify-start">
