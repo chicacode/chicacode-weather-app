@@ -55,7 +55,19 @@ const ChartSection = () => {
     tooltipFillColor: "#4C9FCe",
     tooltipFontStyle: "medium",
     tooltipTemplate: "<%if (label){%><%=label + ' hod' %>: <%}%><%= value + '°C' %>",
-    scaleLabel : "<%= Number(value).toFixed(0).replace('.', ',') + '°C'%>"
+    scaleLabel : "<%= Number(value).toFixed(0).replace('.', ',') + '°C'%>",
+    scales: {
+      x: {
+        grid: {
+          display: false      
+        }
+      },
+      y: {
+        grid: {
+          display: false      
+        }
+      }
+    }
 };
 
   // console.log("forecastDataResult en chart section", forecastDataResult  )
