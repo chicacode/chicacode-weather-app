@@ -50,6 +50,8 @@ const ChartSection = () => {
 
   const options = {
     responsive: true,
+    // maintainAspectRatio:true,
+    // aspectRatio: 3,
     datasetStrokeWidth : 3,
     pointDotStrokeWidth : 4,
     tooltipFillColor: "#4C9FCe",

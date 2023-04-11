@@ -1,4 +1,9 @@
+import useWeather from "../hooks/useWeather";
 const GeneralInfo = () => {
+  const { resultForecastData,  error } = useWeather();
+  const {alert, current, forecast, location } = resultForecastData;
+
+console.log("generalInfo", current)
   return (
     <div>
       
@@ -6,25 +11,41 @@ const GeneralInfo = () => {
       <div className="space-y-3">
         <div className="flex justify-between">
           <div className="flex flex-col text-grayText">
-            <div className="text-2lg">city</div>
-            <div className="text-sm">Country</div>
+            <div className="text-2lg">
+              {location?.name}
+            </div>
+            <div className="text-sm">
+              {location?.country}
+            </div>
           </div>
 
-          <div className="text-md">Hours</div>
+          <div className="text-md">
+            {location?.localtime}
+          </div>
         </div>
 
         <section>
-          Weather Detail
-          <img src="" alt="icon" />
+        <img src={`${current?.condition?.icon}`} alt={`${current?.condition?.text}`} />
+          <h5 className="text-2xl text-grayDarkTitles">{current?.temp_c} Cº</h5>
+          
           <div className="fles justify-between items-center">
-            <div className="text-2xl">Temperature Cs</div>
-            <div>Description</div>
+            <div className="text-2xl">
+            <p className="text-grayText">
+            Feels like:
+            <span className="px-2">{current?.feelslike_c}</span>
+            Cº
+            </p>
+            </div>
+            <div>
+              {current?.condition.text}
+            </div>
           </div>
         </section>
 
         <section>Chance of Rain</section>
 
         <section>Sunrise & Sunset</section>
+        <section>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></section>
       </div>
       </div>
     </div>

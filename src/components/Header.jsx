@@ -21,8 +21,8 @@ const Header = () => {
   const today = date.toDateString();
 
   return (
-    <div className="mt-4">
-      <div className="grid grid-col-1 lg:grid-cols-2 justify-center items-center">
+    <div className="mt-4 pr-44">
+      <div className="grid grid-col-1 md:grid-cols-2 gap-1 justify-center items-center ">
         <div className=" flex flex-col text-sm font-medium text-secondary">
           <div className="flex items-center">
             <h6 className="text-lg text-secondary font-bold pr-1">{month}, </h6>
@@ -32,7 +32,7 @@ const Header = () => {
           <h6 className="text-sm text-grayText font-medium">{today}</h6>
         </div>
 
-        <div className="text-sm font-medium text-secondary pt-8">
+        <div>
           <Search />
         </div>
       </div>

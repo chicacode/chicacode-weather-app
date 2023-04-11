@@ -5,8 +5,7 @@ import useWeather from "../hooks/useWeather";
 
 const WeatherApp = () => {
   const { resultForecastData, loading, error } = useWeather();
-  
-  // const { name, weather, main, coord, sys, wind } = resultData;
+
   return (
     <>
 
