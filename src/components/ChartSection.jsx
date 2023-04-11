@@ -7,7 +7,7 @@ const ChartSection = () => {
   const { current, forecast, location } = resultForecastData;
   const colorCode = " hsla(213, 55%, 19%, 1)";
 
-  console.log('forecast?.forecastday', forecast?.forecastday)
+  // console.log('forecast?.forecastday', forecast?.forecastday)
   let datasetData = [];
   const [forecastDataResult, setForecastDataResult] = useState({
     labels: [

@@ -88,11 +88,14 @@ const GeneralInfo = () => {
               <CardBadget data={forecast?.forecastday[0]?.astro?.sunset} />
             </div>
           </section>
-          <section>
+          <section className="fixed bottom-1">
+            <div className="text-md text-center text-grayDarkOpacity26">
             Powered by{" "}
-            <a href="https://www.weatherapi.com/" title="Free Weather API">
+            <a href="https://www.weatherapi.com/" title="Free Weather API" className="hover:text-light">
               WeatherAPI.com
             </a>
+            </div>
+     
           </section>
         </div>
       </div>
