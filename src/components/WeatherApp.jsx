@@ -8,9 +8,7 @@ const WeatherApp = () => {
 
   return (
     <>
-
       <main className="flex w-full items-center justify-center">
-
         {loading ? <Loader /> : resultForecastData?.current && <WeatherCard />}
         {error && (
           <div className="flex justify-center text-center items-center container mx-auto w-86 bg-error text-light font-light">

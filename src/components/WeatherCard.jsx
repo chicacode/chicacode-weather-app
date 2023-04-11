@@ -3,11 +3,11 @@ import CardDetail from "./CardDetail";
 
 const WeatherCard = () => {
   const { resultData, resultForecastData } = useWeather();
-  // console.log(resultData);
+
   // const { name, weather, main, coord, sys, wind } = resultData;
   const { current, forecast, location } = resultForecastData;
 
-  // console.log("data card", resultForecastData)
+
   const kelvin = 273.15;
   return (
     <div>
